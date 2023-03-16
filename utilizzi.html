@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Elaborato</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="definizioni.html">Definizioni</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="metodi.html">Name Based</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Conclusioni</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/uses.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Utilizzi della tecnica Name Based</h1>
+                            <h2 class="subheading">in diversi campi</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="cont px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="container">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#xampp" aria-controls="collapseExample">Name Based su Xampp Apache</a>
+                                  </h4>
+                                </div>
+                                <div id="xampp" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <img src="assets/img/xampp.svg" alt="xampp">
+                                        <p>
+                                            Appena installato, su Xampp esiste un solo dominio: http://localhost che corrisponde alla cartella C:\xampp\htdocs.
+
+                                            Una soluzione possibile è quella di caricare ogni nuovo sito nella cartella htdocs e vederlo tramite l’indirizzo http://localhost/NomeSito, tuttavia questo approccio presenta diversi difetti come:
+                                        </p>
+                                        <ul>
+                                            <li>L’obbligo di lavorare esclusivamente su una cartella e creare quindi disordine.</li>
+                                            <li>I percorsi relativi alla cartella root potrebbero riscontrare problemi.</li>
+                                            <li>Il percorso del sito sarà http://localhost/NomeSito al posto di un semplice http://NomeSito</li>
+                                        </ul>
+                                        <p>
+                                            A questi problemi viene posto rimedio decidendo di creare diversi domini con host virtualization Name-based.
+                                        </p>
+                                        <a href="guida_apache.html">    
+                                            <p><b>Guida step by step</b><p>
+                                        </a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#altervista" aria-controls="collapseExample">Name Based su Altervista</a>
+                                  </h4>
+                                </div>
+                                <div id="altervista" class="panel-collapse collapse">
+                                    <div class="panel-body"> 
+                                        <p>
+                                            Gran parte dei siti che visitiamo ogni giorno sono ospitati su un Web Server tramite la tecnica name based. Un esempio che abbiamo incontrato durante l’anno è il servizio di Hosting “Altervista”.
+                                        </p>
+                                        <img src="assets/img/altervista.png" alt="altervista">
+                                        <p>
+                                            Hostando un proprio sito su altervista si nota che il nome di dominio suggerito dal sito è così composto: 
+                                        </p>
+                                        <img src="assets/img/esempio.PNG" alt="esempio">  
+                                        <p>
+                                            Analizzando il nome del dominio si nota una parte “variabile”, ovvero il nome del dominio che viene scelto da noi tra quelli disponibili durante la registrazione, e da una parte “fissa”: altervista.org/ che servirà per non creare conflitti con domini già esistenti nel web con nomi di dominio uguali a quello scelto da noi.
+
+                                            Si può quindi presupporre che altervista utilizzi la tecnica name based nel suo servizio di hosting web, possiamo infatti escludere il metodo port-based perchè non è necessario specificare la porta di destinazione nell’URL.
+                                            
+                                            Il dubbio resta quindi tra IP-based e name based ma considerando l'efficienza del secondo e la struttura di nomenclatura offerta da Altervista è molto probabile che sia in uso il name-based virtual hosting.
+                                        </p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#tomcat" aria-controls="collapseExample">Name Based su Tomcat</a>
+                                  </h4>
+                                </div>
+                                <div id="tomcat" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                    <img src="assets/img/tomcat.png" alt="tomcat">
+                                    <p>
+                                        Un altro esempio di web server che utilizza la tecnica di virtual hosting Name-based è apache tomcat.
+                                        Nel corso dell’anno scolastico abbiamo più volte usato tomcat per creare e gestire servlet Java.
+                                        Tomcat, tuttavia, funziona diversamente rispetto ad apache. Infatti, nel nostro caso non necessita di particolari configurazioni.
+                                    </p>
+                                    <a href="analisi.html">    
+                                        <p><b>Analisi Tomcat</b><p>
+                                    </a>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#ms" aria-controls="collapseExample">Name Based su Microsoft Server</a>
+                                  </h4>
+                                </div>
+                                <div id="ms" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                    <img src="assets/img/ms.png" alt="ms">
+                                    <p>
+                                        Alcuni servizi di hosting propongono Microsoft server al posto dei più comuni server Linux.
+                                        Per fornire i servizi di web hosting è necessario configurare ed installare il componente IIS (internet information services).
+
+                                        Al contrario del virtual hosting su server Linux questo risulta più intuitivo e user friendly in quanto tutti i passaggi si possono svolgere dalla classica interfaccia grafica di windows.
+
+                                    </p>
+                                    <a href="guida_ms.html">    
+                                        <p><b>Guida Microsoft Server</b><p>
+                                    </a>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                              
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

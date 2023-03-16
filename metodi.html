@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Elaborato</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="definizioni.html">Definizioni</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">conclusioni</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/multihost.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Gestione di più siti web su un solo web server</h1>
+                            <h2 class="subheading">come avviene e possibili soluzioni</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="cont px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="container">
+                            <h2 class="subheading">Possono coesistere più siti su un solo web server?</h2>
+                            <p>Nella comunicazione appena vista un host comunica con un web server ospitante un solo sito web, è però possibile che sul server coesistano più siti. In questi casi è necessario intraprendere strade diverse da quella vista precedentemente in quanto più siti sullo stesso server avrebbero sia la stessa porta che lo stesso IP e questa omonimia causerebbe disagi nella comunicazione.</p>
+                            <h2 class="subheading">Metodi:</h2>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#IpBased" aria-controls="collapseExample">Ip Based</a>
+                                  </h4>
+                                </div>
+                                <div id="IpBased" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <img src="assets/img/ip.png" alt="ip-based">
+                                        <p>
+                                        Il metodo IP-based consiste nel virtualizzare tanti host quanti i siti web che si intende ospitare sul server, assegnando a ciascuno un ip diverso.
+                                        Utilizzando l’IPV4 questo metodo è altamente sconsigliato in quanto gli indirizzi versione 4 sono scarsi inoltre sarebbe necessaria una potenza di calcolo notevole  per virtualizzare un numero alto di host.
+                                        Il discorso cambia se si utilizza l’IPV6, la potenza di calcolo richiesta resta notevole ma la vastità di indirizzi versione 6 è molto più ampia di quella degli IPV4 quindi si incontrerebbero meno problemi.
+                                        </p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#portBased" aria-controls="collapseExample">Port Based</a>
+                                  </h4>
+                                </div>
+                                <div id="portBased" class="panel-collapse collapse">
+                                    <div class="panel-body"> 
+                                        <img src="assets/img/port.png" alt="ip-based">
+                                        <p>
+                                            Un altro metodo è il Port-based, consiste nel dare una porta diversa a ciascun dominio mantenendoli sullo stesso server e avendo così un solo IP comune. 
+                                            Questo metodo è quasi completamente inutilizzato perché utilizzando una porta not well-known presuppone che l’utente finale oltre al nome di dominio sia a conoscenza anche della porta utilizzata, visto che sarebbe obbligatorio esplicitarla nella barra di ricerca.
+                                            Se decidessimo di hostare due siti HTTP (porta 80) sullo stesso server utilizzando la soluzione Port-Based saremmo costretti a cambiare porta ad uno dei due siti (es porta 81) dunque anche ad esplicitare la porta nella barra di ricerca in quanto non convenzionale.
+                                            L’ URL diventerebbe così www.esempio.com:81.
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-bs-toggle="collapse" aria-expanded="true" href="#nameBased" aria-controls="collapseExample">Name Based</a>
+                                  </h4>
+                                </div>
+                                <div id="nameBased" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                    <img src="assets/img/name.png" alt="ip-based">
+                                    <p>
+                                        Diversamente dai metodi visti precedentemente il metodo name-based permette ai siti ospitati sul server di condividere la stessa porta e lo stesso IP, avendo così tutti lo stesso socket. Il name-based per differenziare i vari siti si serve infatti del loro nome, come si è visto precedentemente la richiesta HTTP possiede un campo “host” in cui specifica il nome del sito che si desidera raggiungere. Proprio grazie a questo campo si è in grado di distinguere più siti pur aventi lo stesso socket.
+                                        Il metodo Name-based presenta quindi diversi vantaggi, per esempio più siti possono coesistere usando lo stesso IP e restando sulla porta predefinita, per questo è il metodo più usato.
+                                        Molti web server su cui abbiamo lavorato possono essere impostati come Name Based, tra cui Apache su Xampp, Tomcat e Altervista.
+
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                              
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
